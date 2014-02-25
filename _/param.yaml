@@ -1,0 +1,16 @@
+---
+author: 'Mesut Çittir'
+description: ''
+email: 'mesut.cittir@bil.omu.edu.tr'
+url: ''
+domain: ''
+intro: ''
+googleanalytics: ''
+googleplus: ''
+brand: default
+landslide: /usr/bin/landslide
+css: _/default.css
+js: _/default.js
+theme: light
+indextemplate: _/index.erb
+foliotemplate: _/default.erb
