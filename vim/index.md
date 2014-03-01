@@ -4,9 +4,11 @@
 
 Mesut Çittir `<mesut.cittir@bil.omu.edu.tr>`
 
-http:///fo.mctr.github.io
+http://mctr.github.io
 
-Şubat 2014
+Mart 2014
+
+![vim](media/vim-logo.png)
 
 ---
 ### Sunumu Hazırlayanlar
