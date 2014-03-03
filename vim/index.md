@@ -1,4 +1,4 @@
-#   Vim
+# Vim
 
 .fx: first
 
@@ -6,32 +6,77 @@ Mesut Çittir `<mesut.cittir@bil.omu.edu.tr>`
 
 http://mctr.github.io
 
+Sümeyra Özgür `<sumeyra.ozgur@bil.omu.edu.tr>`
+
+http://sozgur.github.com
+
 Mart 2014
 
 ![vim](media/vim-logo.png)
 
 ---
-### Sunumu Hazırlayanlar
+## Vim
 
-Mesut Çittir `<mesut.cittir@bil.omu.edu.tr>`
+* Çok güçlü bir metin editörüdür
 
-Sümeyra Özgür `<sumeyra.ozgur@bil.omu.edu.tr>`
+* C ve Vimscript ile yazılmıştır
+
+* Bram Moolenaar tarafından geliştirilmiştir ve 1991 yılında yayınlanmıştır
+
+* Vi, metin düzenleyici temel alınarak geliştirilmiştir. 
+
+* Vi IMproved  => VİM
+
+* Vim, GNU GPL lisanslıdır
+
+* Çoklu platform destegi saglamaktadır
+
+* 2006 yılında Linux Journal okuyucuları tarafından en çok begenilen metin düzenleyicisi seçilmiştir
+
+---
+## Alternatifleri
+
+* Emacs
+
+* Kate
+
+* Sublime Text
+
+* Acme
+
+* Geany
+
+* Gedit
+
+* TextMate
+
+* ... #TODO
 
 ---
 
-## Vim`e Giriş
-.fx: first
+## Avantaj & Dezavantajı 
 
-Mesut Çittir
+* Dosya açma süresi
 
-10060318
+* Destekledigi karakter kodlamaları
 
+* Çoklu pencere destegi
+
+* Çoklu UNDO mekanizması
+
+* Tampon bellek kullanımı
+
+* İnsert/Komut modunda kelime/dosya tamamlama
+
+ 
 ---
 
-## Vim Kurulumu
+## Kurulum
 
-*	sudo apt-get install vim-full
+* Uçbirim açılır ve aşağıdaki komutlar yazılır :
+
+		$ sudo apt-get install vim
+
 	
-*	Bu bir deneme folyosu
 
 ---
