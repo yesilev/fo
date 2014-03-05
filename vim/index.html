@@ -1788,7 +1788,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
             </aside>
             
             <aside class="page_number">
-              1/5
+              1/19
             </aside>
           </footer>
         </div>
@@ -1843,7 +1843,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
             </aside>
             
             <aside class="page_number">
-              2/5
+              2/19
             </aside>
           </footer>
         </div>
@@ -1898,7 +1898,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
             </aside>
             
             <aside class="page_number">
-              3/5
+              3/19
             </aside>
           </footer>
         </div>
@@ -1947,7 +1947,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
             </aside>
             
             <aside class="page_number">
-              4/5
+              4/19
             </aside>
           </footer>
         </div>
@@ -1958,12 +1958,12 @@ div.slide table:not(.highlighttable) tr td:first-child {
         <div class="slide">
           <div class="inner">
             
-            <header><h2>Kurulum</h2></header>
+            <header><h2>Vim Nas&#305;l Kurulur?</h2></header>
             
             
             <section><ul>
 <li>
-<p>U&ccedil;birim a&ccedil;&#305;l&#305;r ve a&#351;a&#287;&#305;daki komutlar yaz&#305;l&#305;r :</p>
+<p>U&ccedil;birim a&ccedil;&#305;l&#305;r ve a&#351;a&#287;&#305;daki komut yaz&#305;l&#305;r :</p>
 <pre><code>$ sudo apt-get install vim
 </code></pre>
 </li>
@@ -1983,7 +1983,756 @@ div.slide table:not(.highlighttable) tr td:first-child {
             </aside>
             
             <aside class="page_number">
-              5/5
+              5/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Vim Durumlar&#305;</h2></header>
+            
+            
+            <section><p>Vim 3 ana hattan olu&#351;ur</p>
+<ul>
+<li>
+<p>&#304;nsert</p>
+<ul>
+<li><code>i</code> tu&#351;una basarak yazma moduna ge&ccedil;ilir ve dosya &uuml;zerinde degi&#351;iklikler yap&#305;labilir</li>
+</ul>
+</li>
+<li>
+<p>Escape</p>
+<ul>
+<li><code>esc</code> tu&#351;una basarak escape moduna ge&ccedil;ilir ve k&#305;sayollar kullan&#305;labilir</li>
+</ul>
+</li>
+<li>
+<p>Command</p>
+<ul>
+<li>
+<p>escape modunda iken <code>:</code> tu&#351;una bas&#305;larak komut moduna ge&ccedil;ilir</p>
+</li>
+<li>
+<p>Dosya &uuml;zerinde i&#351;lemler yap&#305;labilir, d&#305;&#351; komut &ccedil;al&#305;&#351;t&#305;r&#305;labilir, bul/degi&#351;tir yap&#305;labilir </p>
+</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Dosya A&ccedil;ma</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Dosya ad&#305; vermeden vim a&ccedil;abiliriz ve kaydetme i&#351;lemini burada yapabiliriz</p>
+<ul>
+<li>$ vim</li>
+<li>:w main.txt</li>
+</ul>
+</li>
+<li>
+<p>Bulundugumuz dizinde <code>main.txt</code> ad&#305;nda dosya a&ccedil;al&#305;m</p>
+<ul>
+<li>$ vim main.txt</li>
+</ul>
+</li>
+<li>
+<p>Ayn&#305; anda birden fazla dosya a&ccedil;abilirsiniz</p>
+<ul>
+<li>$ vim filename1 filename2 filename3</li>
+<li>A&ccedil;&#305;l&#305;&#351;ta ilk dosya a&ccedil;&#305;l&#305;r ve <code>:next</code> veya <code>:bn</code> komutu ile bir sonraki dosyaya, 
+    <code>:prev</code> veya <code>:bp</code> komutu ile de bir &ouml;nceki dosyaya ge&ccedil;i&#351; yapabiliriz</li>
+</ul>
+</li>
+<li>
+<p>Diger se&ccedil;enekler</p>
+<ul>
+<li>$ <code>vim +19 filename</code> dosyay&#305; a&ccedil;ar ve imle&ccedil; 19. sat&#305;ra gider</li>
+<li>$ <code>vim +filename</code> dosya a&ccedil;&#305;l&#305;r ve imle&ccedil; son sat&#305;ra gider</li>
+<li>$ <code>vim -d filename1 filename2</code> iki dosya aras&#305;ndaki farklar&#305; g&ouml;sterir</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Dosya A&ccedil;ma 2</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Yatay olarak ekran&#305; ikiye b&ouml;lerek yeni bir dosya a&ccedil;abiliriz</p>
+<ul>
+<li><code>:split filename</code> veya <code>:sp filename</code></li>
+</ul>
+</li>
+<li>
+<p>Dikey olarak ekran&#305; ikiye b&ouml;lerek yeni bir dosya a&ccedil;abiliriz </p>
+<ul>
+<li><code>:vsplit filename</code> veya <code>:vsp filename</code> <br />
+</li>
+</ul>
+</li>
+<li>
+<p>A&ccedil;&#305;lan yeni pencereler aras&#305;nda ge&ccedil;i&#351; yapmak i&ccedil;in &ouml;nce <code>Ctrl + w</code> tu&#351;una daha sonra 
+    ge&ccedil;i&#351; yapmak istediginiz ekran taraf&#305;ndaki y&ouml;n tu&#351;una basmal&#305;s&#305;n&#305;z</p>
+</li>
+<li>
+<p>Dosyalar aras&#305; ge&ccedil;i&#351; yapmak i&ccedil;in <code>Ctrl + ww</code> tu&#351;una da bas&#305;labilir</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Kaydetme ve &Ccedil;&#305;kma</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Yap&#305;lan degi&#351;iklikleri dosyadan &ccedil;&#305;kmadan kaydetmek i&ccedil;in <code>:w</code></p>
+</li>
+<li>
+<p>Yap&#305;lan degi&#351;iklikleri kaydedip dosyadan &ccedil;&#305;kmak i&ccedil;in <code>:wq</code></p>
+</li>
+<li>
+<p>Dosyada herhangi bir degi&#351;iklik yapmadan, &ccedil;&#305;kmak i&ccedil;in <code>:q</code></p>
+</li>
+<li>
+<p>Yapt&#305;g&#305;m&#305;z degi&#351;iklerin kaydedilmeden dosyay&#305; ilk a&ccedil;t&#305;g&#305;m&#305;z hali ile b&#305;rakmak i&ccedil;in <code>:q!</code></p>
+</li>
+</ul>
+<dl>
+<dd>
+<ul>
+<li><code>:w newfile</code> komutu ile &uuml;zerinde &ccedil;al&#305;&#351;t&#305;g&#305;m&#305;z dosyay&#305; newfile ad&#305;nda yeni bir dosya olarak da kaydeder</li>
+<li><code>saveas newfile</code> komutu ile yukardaki i&#351;lemin ayn&#305;s&#305; yap&#305;l&#305;r ve yeni dosyaya ge&ccedil;i&#351; yap&#305;l&#305;r</li>
+<li><code>5,19w newfile</code> komutu ile &uuml;zerinde &ccedil;al&#305;&#351;t&#305;g&#305;m&#305;z dosyan&#305;n 5-19 sat&#305;rlar&#305; aras&#305;n&#305; newfile adl&#305; yeni dosyaya kaydeder</li>
+</ul>
+</dd>
+</dl></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Se&ccedil;-Kopyala-Yap&#305;&#351;t&#305;r</h2></header>
+            
+            
+            <section><h3>Se&ccedil;</h3>
+<ul>
+<li>
+<p><code>v</code> tu&#351;uana basarak <code>visual</code> moduna ge&ccedil;ilir ve se&ccedil;me yap&#305;labilir</p>
+</li>
+<li>
+<p>&#304;mlecin bulundugu yerden sat&#305;r sonuna kadar se&ccedil;mek istiyorsak <code>$</code> i&#351;areti bizi sat&#305;r sonuna g&ouml;t&uuml;r&uuml;r<br />
+</p>
+</li>
+<li>
+<p>Birden fazla sat&#305;r se&ccedil;mek istiyorsak imleci hareket ettirmemiz yeterli</p>
+</li>
+</ul>
+<h3>Kopyala</h3>
+<ul>
+<li>
+<p>T&uuml;m sat&#305;r&#305; kopyalamak i&ccedil;in <code>yy</code> tu&#351;una basal&#305;r</p>
+</li>
+<li>
+<p>Bir blog se&ccedil;ilmi&#351;se bunu kopyalamak i&ccedil;in <code>y</code> tu&#351;una basmam&#305;z yeterli</p>
+</li>
+</ul>
+<h3>Yap&#305;&#351;t&#305;r</h3>
+<ul>
+<li>
+<p><code>p</code> tu&#351;una bas&#305;larak bir alt sat&#305;ra yap&#305;&#351;t&#305;r&#305;labilir</p>
+</li>
+<li>
+<p><code>P</code> tu&#351;una bas&#305;larak da bir &uuml;st sat&#305;ra yap&#305;&#351;t&#305;r&#305;labilir</p>
+</li>
+<li>
+<p>&#304;mlecin bulundugu t&uuml;m sat&#305;r&#305; kes-kopyala-yap&#305;&#351;t&#305;r yapmak i&ccedil;in <code>dd</code> tu&#351;una bas&#305;l&#305;r ve yap&#305;&#351;t&#305;r&#305;lmak istenen yere gelip <code>p</code> tu&#351;una bas&#305;l&#305;r</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Dosya &#304;&ccedil;erisinde Dola&#351;ma</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Dosya i&ccedil;erisinde h-j-k-l tu&#351;lar&#305; ve y&ouml;n tu&#351;lar&#305; ile dola&#351;abiliyorduk</p>
+</li>
+<li>
+<p><code>3j</code> komutu ile 3 sat&#305;r a&#351;ag&#305;ya gidilir</p>
+</li>
+<li>
+<p><code>fk</code> sat&#305;rda saga dogru k harfinin bulundugu ilk yere gider</p>
+</li>
+<li>
+<p><code>H</code> imle&ccedil; ekranda g&ouml;sterilen sayfa ba&#351;&#305;na, <code>L</code> sayfa sonuna, <code>M</code> ise sayfa ortas&#305;na gider</p>
+</li>
+<li>
+<p><code>gg</code> dosya ba&#351;&#305;na, <code>G</code> dosya sonuna gider </p>
+</li>
+<li>
+<p><code>SHIFT + g</code>, imle&ccedil; dosyan&#305;n sonuna gider </p>
+</li>
+<li>
+<p><code>:181</code> imle&ccedil; 181.sat&#305;ra gider </p>
+</li>
+<li>
+<p><code>19 SHIFT + G</code> ,imle&ccedil; 19. sat&#305;ra gider </p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Dosya &#304;&ccedil;erisinde Dola&#351;ma</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p><code>Ctrl + g</code> tu&#351;layarak  a&#351;ag&#305;da dosya hakk&#305;nda(konumumuz, dosyan&#305;n durumu) bilgilere sahip olabiliriz </p>
+</li>
+<li>
+<p>Sat&#305;r sonuna gitmek i&ccedil;in <code>$</code> tu&#351;una bas&#305;l&#305;r</p>
+</li>
+<li>
+<p>Sat&#305;r sonuna metin eklemek i&ccedil;in <code>A</code> tu&#351;una bas&#305;l&#305;r(Ayn&#305; zaman insert kipine ge&ccedil;er)</p>
+</li>
+<li>
+<p><code>Ctrl + f</code> sayfa sayfa ileri gitmemizi saglar</p>
+</li>
+<li>
+<p><code>Ctrl + b</code> sayfa sayfa geri gitmemizi saglar</p>
+</li>
+<li>
+<p><code>Ctrl + e</code> dosyay&#305; yukar&#305; dogru kayd&#305;r&#305;r</p>
+</li>
+<li>
+<p><code>Ctrl + y</code> dosyay&#305; a&#351;ag&#305; dogru kayd&#305;r&#305;r</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Arama</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Bulmak istediginiz kelimeyi <code>escape</code> modunda iken <code>/kelime</code> yaz&#305;n kelime bulunup imle&ccedil; o kelimenin ba&#351;&#305;na gidecektir</p>
+</li>
+<li>
+<p>Ayn&#305; kelime &ouml;begini tekrar ileriye dogru aramak i&ccedil;in <code>n</code> tu&#351;una, geriye dogru aramak i&ccedil;in <code>SHIFT + N</code> tu&#351;una basarak ilerleyebilirsiniz</p>
+</li>
+<li>
+<p>Eger kelimeyi aramaya tersten ba&#351;lamak istiyorsan&#305;z <code>?kelime</code> yazman&#305;z yeterli</p>
+</li>
+<li>
+<p>Aranan kelimenin sonuna <code>\c</code> eklersek, aramay&#305; k&uuml;&ccedil;&uuml;k b&uuml;y&uuml;k harf duyars&#305;z arama yapar</p>
+</li>
+<li>
+<p>&#304;mlecin &uuml;zerinde bulundugu kelimeyi ileriye dogru aramak i&ccedil;in <code>*</code> tu&#351;una bas&#305;n</p>
+</li>
+<li>
+<p>&#304;mlecin &uuml;zerinde bulundugu kelimeyi geriye dogru aramak i&ccedil;in <code>#</code> tu&#351;una bas&#305;n</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Bul - Degi&#351;tir</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>&#304;mlecin bulundugu sat&#305;rdaki ilk  <code>eski</code> kelimesini <code>yeni</code> kelimesi ile degi&#351;tirelim
+        <code>:s/eski/yeni</code></p>
+</li>
+<li>
+<p>&#304;mlecin bulundugu sat&#305;rdaki t&uuml;m  <code>eski</code> kelimesini <code>yeni</code> kelimesi ile degi&#351;tirelim
+        <code>:s/eski/yeni/g</code></p>
+</li>
+<li>
+<p>&#304;ki sat&#305;r aras&#305;ndaki kelime &ouml;beklerini degi&#351;tirmek i&ccedil;in
+        <code>:5,19s/eski/yeni/g</code></p>
+</li>
+<li>
+<p>Bir dosyadaki t&uuml;m kar&#351;&#305;la&#351;malar&#305; degi&#351;tirmek i&ccedil;in
+        <code>:%s/eski/yeni/g</code></p>
+</li>
+<li>
+<p>Her seferinde onay sormas&#305; i&ccedil;in
+        <code>:%s/eski/yeni/gc</code></p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>D&#305;&#351; Komut Nas&#305;l &Ccedil;al&#305;&#351;t&#305;r&#305;l&#305;r</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Vim de bir dosyan&#305;n i&ccedil;erisindeyken d&#305;&#351; komut &ccedil;al&#305;&#351;t&#305;rabiliyoruz</p>
+</li>
+<li>
+<p>Bunu <code>:!komut</code> bu komut sayesinde yapabiliyoruz </p>
+</li>
+<li>
+<p>Bulundugumuz dizin alt&#305;ndaki dosya ve dizinleri listeleyelim <code>:!ls</code></p>
+</li>
+<li>
+<p>Herhangi bir dosya silebiliriz <code>:!rm filename</code></p>
+</li>
+<li>
+<p><code>:r! cat filename</code> &#351;eklinde kullan&#305;rsak komut &ccedil;&#305;kt&#305;s&#305;n&#305; bulundugumuz dosyaya yazd&#305;rabiliriz</p>
+</li>
+<li>
+<p>Yukar&#305;daki i&#351;lemin ayn&#305;s&#305;n&#305; <code>:r filename</code> komutu ile de yapabiliriz.&#304;mlecin alt&#305;na filename dosyas&#305;n&#305;n i&ccedil;erigini yazar</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Yararl&#305; K&#305;sayollar</h2></header>
+            
+            
+            <section><h3>Otomatik Tamamlama</h3>
+<ul>
+<li>
+<p>Vim, yazma modunda iken yazd&#305;g&#305;m&#305;z bir ka&ccedil; harften sonra dosya i&ccedil;erisinde bu harf veya harflerle ba&#351;layan kelimeleri listeler</p>
+</li>
+<li>
+<p>Bizde bu listeden se&ccedil;ip kelimenin t&uuml;m harflerini yazmam&#305;za gerek kalmaz </p>
+</li>
+<li>
+<p>Bunun i&ccedil;in <code>ctrl + p</code> veya <code>ctrl + n</code> kombinasyonlar&#305; kullan&#305;labilir </p>
+</li>
+</ul>
+<h3>Degi&#351;iklikleri Geri Alma</h3>
+<ul>
+<li>
+<p>Bir sat&#305;rdaki t&uuml;m degi&#351;iklikleri geri almak i&ccedil;in <code>U</code> </p>
+</li>
+<li>
+<p>Dosya &uuml;zerinde yap&#305;lan degi&#351;iklikleri geri almak i&ccedil;in escape modunda <code>u</code> harfine basarak,
+     veya komut modunda <code>:u</code> komutunu kullanarak yapt&#305;g&#305;n&#305;z degi&#351;iklikleri geri alabilirsiniz</p>
+</li>
+<li>
+<p>Geri almalar&#305; geri almak i&ccedil;in <code>Ctrl + r</code></p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Yararl&#305; k&#305;sayollar</h2></header>
+            
+            
+            <section><h3>Dosya Ge&ccedil;i&#351;i</h3>
+<ul>
+<li>
+<p>Vim de &ccedil;al&#305;&#351;&#305;rken bir dosyay&#305; kapat&#305;p yeni bir dosya a&ccedil;mak i&ccedil;in ekstra i&#351;lemler yapman&#305;za gerek yok 
+    <code>:e filename</code> dediginiz anda &uuml;zerinde &ccedil;al&#305;&#351;t&#305;g&#305;n&#305;z dosya kapan&#305;r istediginiz dosya a&ccedil;&#305;l&#305;r</p>
+</li>
+<li>
+<p><code>:e +19 filename</code> komutu ile imle&ccedil; 19. sat&#305;rda filename dosyas&#305; a&ccedil;&#305;l&#305;r</p>
+</li>
+</ul>
+<h3>Otomatik Girintileme</h3>
+<ul>
+<li>
+<p><code>v</code> tu&#351;una bas&#305;larak visual moduna ge&ccedil;ilir ve blok se&ccedil;imi yap&#305;l&#305;r daha sonra 
+    <code>=</code> tu&#351;una basarsak vim se&ccedil;ilen blogu otomatik olarak girintilemesini yapar</p>
+</li>
+<li>
+<p><code>:&lt;Tab&gt;</code> iki noktadan sonra tab tu&#351;una bast&#305;g&#305;m&#305;zda olas&#305; komutlar&#305; g&ouml;rebiliriz</p>
+</li>
+<li>
+<p><code>:help</code> yard&#305;m ekran&#305;n&#305; a&ccedil;ar</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>K&#305;sayollar</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p><code>dd</code> imlecin bulundugu sat&#305;r&#305; siler</p>
+</li>
+<li>
+<p><code>dH</code> imlecin oldugu yerden ekran&#305;n ba&#351;&#305;ndaki sat&#305;ra kadar siler</p>
+</li>
+<li>
+<p><code>dL</code> ekran&#305;n sonuna kadar her&#351;eyi siler</p>
+</li>
+<li>
+<p><code>dG</code> imlecin bulundugu yerden dosyan&#305;n sonuna kadar her&#351;eyi siler</p>
+</li>
+<li>
+<p><code>yG</code> dosyan&#305;n sonuna kadar her&#351;eyi kopyalar</p>
+</li>
+<li>
+<p><code>yH</code> imlecin bulundugu yerden ekran&#305;n ba&#351;&#305;ndaki sat&#305;ra kadar her&#351;eyi kopyalar</p>
+</li>
+<li>
+<p><code>yL</code> ekran&#305;n sonuna kadar her&#351;eyi kopyalar</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: /home/mesut/folyo/vim/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Ortam Degi&#351;kenleri</h2></header>
+            
+            
+            <section><p>Vim i&ccedil;erisinde standart ayarlar&#305; kullanabileceginiz gibi bazen vim`in o ana &ouml;zel davranmas&#305;n&#305; isteyebiliriz</p>
+<p>Bunun i&ccedil;in <code>:set</code> komutunu kullanarak vim`in istedigimiz gibi davranmas&#305;n&#305; saglayabiliriz</p>
+<ul>
+<li>
+<p><code>:syntax on</code> dosya tipine g&ouml;re renklendirme/bi&ccedil;imlendirme yapar</p>
+</li>
+<li>
+<p><code>:set number/nonumber</code> sat&#305;r ba&#351;lar&#305;nda numara g&ouml;z&uuml;kmesini/g&ouml;z&uuml;kmemesini saglar</p>
+</li>
+<li>
+<p><code>:set background=dark</code> arkaplan&#305; koyula&#351;t&#305;r&#305;r</p>
+</li>
+<li>
+<p><code>:set is</code> arama &#351;ablonu yaz&#305;l&#305;rken bulmaya ba&#351;lar</p>
+</li>
+<li>
+<p><code>:set ic</code> k&uuml;&ccedil;&uuml;k b&uuml;y&uuml;k harf ay&#305;rt etmeden arar</p>
+</li>
+<li>
+<p><code>:set hls</code> metin i&ccedil;inde arama &#351;ablonuna uyan b&ouml;l&uuml;mler belirginle&#351;tirilir</p>
+</li>
+<li>
+<p><code>:set tabstop=4</code> tab uzunlugu ayarlan&#305;r</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="/home/mesut/folyo/vim/index.md">/home/mesut/folyo/vim/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/19
             </aside>
           </footer>
         </div>
@@ -2005,7 +2754,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
           <footer>
             
             <aside class="page_number">
-              /5
+              /19
             </aside>
           </footer>
         </div>
@@ -2041,8 +2790,78 @@ div.slide table:not(.highlighttable) tr td:first-child {
         </tr>
         
         <tr id="toc-row-5" class="sub">
-          <th><a href="#slide5">Kurulum</a></th>
+          <th><a href="#slide5">Vim Nas&#305;l Kurulur?</a></th>
           <td><a href="#slide5">5</a></td>
+        </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">Vim Durumlar&#305;</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">Dosya A&ccedil;ma</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">Dosya A&ccedil;ma 2</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">Kaydetme ve &Ccedil;&#305;kma</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">Se&ccedil;-Kopyala-Yap&#305;&#351;t&#305;r</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Dosya &#304;&ccedil;erisinde Dola&#351;ma</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Dosya &#304;&ccedil;erisinde Dola&#351;ma</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13">Arama</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">Bul - Degi&#351;tir</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+        <tr id="toc-row-15" class="sub">
+          <th><a href="#slide15">D&#305;&#351; Komut Nas&#305;l &Ccedil;al&#305;&#351;t&#305;r&#305;l&#305;r</a></th>
+          <td><a href="#slide15">15</a></td>
+        </tr>
+        
+        <tr id="toc-row-16" class="sub">
+          <th><a href="#slide16">Yararl&#305; K&#305;sayollar</a></th>
+          <td><a href="#slide16">16</a></td>
+        </tr>
+        
+        <tr id="toc-row-17" class="sub">
+          <th><a href="#slide17">Yararl&#305; k&#305;sayollar</a></th>
+          <td><a href="#slide17">17</a></td>
+        </tr>
+        
+        <tr id="toc-row-18" class="sub">
+          <th><a href="#slide18">K&#305;sayollar</a></th>
+          <td><a href="#slide18">18</a></td>
+        </tr>
+        
+        <tr id="toc-row-19" class="sub">
+          <th><a href="#slide19">Ortam Degi&#351;kenleri</a></th>
+          <td><a href="#slide19">19</a></td>
         </tr>
         
       

@@ -71,12 +71,277 @@ Mart 2014
  
 ---
 
-## Kurulum
+## Vim Nasıl Kurulur?
 
-* Uçbirim açılır ve aşağıdaki komutlar yazılır :
-
-		$ sudo apt-get install vim
-
+* Uçbirim açılır ve aşağıdaki komut yazılır :
 	
+		$ sudo apt-get install vim	
+
+---
+
+## Vim Durumları
+
+Vim 3 ana hattan oluşur
+
+* İnsert
+	+ `i` tuşuna basarak yazma moduna geçilir ve dosya üzerinde degişiklikler yapılabilir
+
+* Escape
+	+ `esc` tuşuna basarak escape moduna geçilir ve kısayollar kullanılabilir
+
+* Command
+	+ escape modunda iken `:` tuşuna basılarak komut moduna geçilir
+
+	+ Dosya üzerinde işlemler yapılabilir, dış komut çalıştırılabilir, bul/degiştir yapılabilir	
+
+---
+
+##Dosya Açma
+
+* Dosya adı vermeden vim açabiliriz ve kaydetme işlemini burada yapabiliriz
+	+ $ vim
+	+ :w main.txt
+  
+* Bulundugumuz dizinde `main.txt` adında dosya açalım
+	+ $ vim main.txt
+
+* Aynı anda birden fazla dosya açabilirsiniz
+	+ $ vim filename1 filename2 filename3
+	+ Açılışta ilk dosya açılır ve `:next` veya `:bn` komutu ile bir sonraki dosyaya, 
+		`:prev` veya `:bp` komutu ile de bir önceki dosyaya geçiş yapabiliriz
+  
+* Diger seçenekler
+
+	+ $ `vim +19 filename` dosyayı açar ve imleç 19. satıra gider
+	+ $ `vim +filename` dosya açılır ve imleç son satıra gider
+	+ $ `vim -d filename1 filename2` iki dosya arasındaki farkları gösterir
+
+---
+
+##Dosya Açma 2
+
+* Yatay olarak ekranı ikiye bölerek yeni bir dosya açabiliriz
+	+ `:split filename` veya `:sp filename`
+
+* Dikey olarak ekranı ikiye bölerek yeni bir dosya açabiliriz 
+	+ `:vsplit filename` veya `:vsp filename`   
+
+* Açılan yeni pencereler arasında geçiş yapmak için önce `Ctrl + w` tuşuna daha sonra 
+	geçiş yapmak istediginiz ekran tarafındaki yön tuşuna basmalısınız
+
+* Dosyalar arası geçiş yapmak için `Ctrl + ww` tuşuna da basılabilir
+
+---
+
+## Kaydetme ve Çıkma
+
+* Yapılan degişiklikleri dosyadan çıkmadan kaydetmek için `:w`
+
+* Yapılan degişiklikleri kaydedip dosyadan çıkmak için `:wq`
+
+* Dosyada herhangi bir degişiklik yapmadan, çıkmak için `:q`
+
+* Yaptıgımız degişiklerin kaydedilmeden dosyayı ilk açtıgımız hali ile bırakmak için `:q!`
+
+:	+ `:w newfile` komutu ile üzerinde çalıştıgımız dosyayı newfile adında yeni bir dosya olarak da kaydeder
+	+ `saveas newfile` komutu ile yukardaki işlemin aynısı yapılır ve yeni dosyaya geçiş yapılır
+	+ `5,19w newfile` komutu ile üzerinde çalıştıgımız dosyanın 5-19 satırları arasını newfile adlı yeni dosyaya kaydeder
+
+---
+
+## Seç-Kopyala-Yapıştır
+
+### Seç
+
+* `v` tuşuana basarak `visual` moduna geçilir ve seçme yapılabilir
+
+* İmlecin bulundugu yerden satır sonuna kadar seçmek istiyorsak `$` işareti bizi satır sonuna götürür  
+
+* Birden fazla satır seçmek istiyorsak imleci hareket ettirmemiz yeterli
+
+### Kopyala
+
+* Tüm satırı kopyalamak için `yy` tuşuna basalır
+
+* Bir blog seçilmişse bunu kopyalamak için `y` tuşuna basmamız yeterli
+
+### Yapıştır
+
+* `p` tuşuna basılarak bir alt satıra yapıştırılabilir
+
+* `P` tuşuna basılarak da bir üst satıra yapıştırılabilir
+
+* İmlecin bulundugu tüm satırı kes-kopyala-yapıştır yapmak için `dd` tuşuna basılır ve yapıştırılmak istenen yere gelip `p` tuşuna basılır
+
+---
+
+##Dosya İçerisinde Dolaşma
+
+* Dosya içerisinde h-j-k-l tuşları ve yön tuşları ile dolaşabiliyorduk
+
+* `3j` komutu ile 3 satır aşagıya gidilir
+
+* `fk` satırda saga dogru k harfinin bulundugu ilk yere gider
+
+* `H` imleç ekranda gösterilen sayfa başına, `L` sayfa sonuna, `M` ise sayfa ortasına gider
+
+* `gg` dosya başına, `G` dosya sonuna gider 
+
+* `SHIFT + g`, imleç dosyanın sonuna gider 
+
+* `:181` imleç 181.satıra gider 
+
+* `19 SHIFT + G` ,imleç 19. satıra gider 
+
+---
+##Dosya İçerisinde Dolaşma 
+
+* `Ctrl + g` tuşlayarak  aşagıda dosya hakkında(konumumuz, dosyanın durumu) bilgilere sahip olabiliriz 
+	
+* Satır sonuna gitmek için `$` tuşuna basılır
+
+* Satır sonuna metin eklemek için `A` tuşuna basılır(Aynı zaman insert kipine geçer)
+
+* `Ctrl + f` sayfa sayfa ileri gitmemizi saglar
+
+* `Ctrl + b` sayfa sayfa geri gitmemizi saglar
+
+* `Ctrl + e` dosyayı yukarı dogru kaydırır
+
+* `Ctrl + y` dosyayı aşagı dogru kaydırır
+
+---
+
+## Arama 
+
+* Bulmak istediginiz kelimeyi `escape` modunda iken `/kelime` yazın kelime bulunup imleç o kelimenin başına gidecektir
+
+* Aynı kelime öbegini tekrar ileriye dogru aramak için `n` tuşuna, geriye dogru aramak için `SHIFT + N` tuşuna basarak ilerleyebilirsiniz
+
+* Eger kelimeyi aramaya tersten başlamak istiyorsanız `?kelime` yazmanız yeterli
+
+* Aranan kelimenin sonuna `\c` eklersek, aramayı küçük büyük harf duyarsız arama yapar
+
+* İmlecin üzerinde bulundugu kelimeyi ileriye dogru aramak için `*` tuşuna basın
+
+* İmlecin üzerinde bulundugu kelimeyi geriye dogru aramak için `#` tuşuna basın
+ 
+---
+
+## Bul - Degiştir
+
+* İmlecin bulundugu satırdaki ilk  `eski` kelimesini `yeni` kelimesi ile degiştirelim
+		`:s/eski/yeni`
+
+* İmlecin bulundugu satırdaki tüm  `eski` kelimesini `yeni` kelimesi ile degiştirelim
+		`:s/eski/yeni/g`
+
+* İki satır arasındaki kelime öbeklerini degiştirmek için
+		`:5,19s/eski/yeni/g`
+
+* Bir dosyadaki tüm karşılaşmaları degiştirmek için
+		`:%s/eski/yeni/g`
+
+* Her seferinde onay sorması için
+		`:%s/eski/yeni/gc`
+
+---
+
+##Dış Komut Nasıl Çalıştırılır
+
+* Vim de bir dosyanın içerisindeyken dış komut çalıştırabiliyoruz
+
+* Bunu `:!komut` bu komut sayesinde yapabiliyoruz 
+
+* Bulundugumuz dizin altındaki dosya ve dizinleri listeleyelim `:!ls`
+
+* Herhangi bir dosya silebiliriz `:!rm filename`
+
+* `:r! cat filename` şeklinde kullanırsak komut çıktısını bulundugumuz dosyaya yazdırabiliriz
+
+* Yukarıdaki işlemin aynısını `:r filename` komutu ile de yapabiliriz.İmlecin altına filename dosyasının içerigini yazar
+ 
+---
+
+## Yararlı Kısayollar
+
+###Otomatik Tamamlama
+
+* Vim, yazma modunda iken yazdıgımız bir kaç harften sonra dosya içerisinde bu harf veya harflerle başlayan kelimeleri listeler
+
+* Bizde bu listeden seçip kelimenin tüm harflerini yazmamıza gerek kalmaz 
+
+* Bunun için `ctrl + p` veya `ctrl + n` kombinasyonları kullanılabilir 
+ 
+###Degişiklikleri Geri Alma
+
+* Bir satırdaki tüm degişiklikleri geri almak için `U` 
+
+* Dosya üzerinde yapılan degişiklikleri geri almak için escape modunda `u` harfine basarak,
+	 veya komut modunda `:u` komutunu kullanarak yaptıgınız degişiklikleri geri alabilirsiniz
+
+* Geri almaları geri almak için `Ctrl + r`
+
+---
+
+## Yararlı kısayollar
+
+###Dosya Geçişi
+
+* Vim de çalışırken bir dosyayı kapatıp yeni bir dosya açmak için ekstra işlemler yapmanıza gerek yok 
+	`:e filename` dediginiz anda üzerinde çalıştıgınız dosya kapanır istediginiz dosya açılır
+
+
+* `:e +19 filename` komutu ile imleç 19. satırda filename dosyası açılır
+
+### Otomatik Girintileme
+
+* `v` tuşuna basılarak visual moduna geçilir ve blok seçimi yapılır daha sonra 
+	`=` tuşuna basarsak vim seçilen blogu otomatik olarak girintilemesini yapar
+
+
+* `:<Tab>` iki noktadan sonra tab tuşuna bastıgımızda olası komutları görebiliriz
+
+* `:help` yardım ekranını açar
+
+---
+
+## Kısayollar
+
+* `dd` imlecin bulundugu satırı siler
+
+* `dH` imlecin oldugu yerden ekranın başındaki satıra kadar siler
+
+* `dL` ekranın sonuna kadar herşeyi siler
+
+* `dG` imlecin bulundugu yerden dosyanın sonuna kadar herşeyi siler
+
+* `yG` dosyanın sonuna kadar herşeyi kopyalar
+
+* `yH` imlecin bulundugu yerden ekranın başındaki satıra kadar herşeyi kopyalar
+
+* `yL` ekranın sonuna kadar herşeyi kopyalar
+
+---
+
+## Ortam Degişkenleri
+
+Vim içerisinde standart ayarları kullanabileceginiz gibi bazen vim`in o ana özel davranmasını isteyebiliriz
+
+Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını saglayabiliriz
+
+* `:syntax on` dosya tipine göre renklendirme/biçimlendirme yapar
+
+* `:set number/nonumber` satır başlarında numara gözükmesini/gözükmemesini saglar
+
+* `:set background=dark` arkaplanı koyulaştırır
+
+* `:set is` arama şablonu yazılırken bulmaya başlar
+
+* `:set ic` küçük büyük harf ayırt etmeden arar
+
+* `:set hls` metin içinde arama şablonuna uyan bölümler belirginleştirilir
+
+* `:set tabstop=4` tab uzunlugu ayarlanır
 
 ---
