@@ -27,7 +27,7 @@ Mart 2014
 
 * Vi IMproved  => VİM
 
-* Vim, GNU GPL lisanslıdır
+* Vim, GPL lisanslıdır
 
 * Çoklu platform destegi saglamaktadır
 
@@ -50,11 +50,11 @@ Mart 2014
 
 * TextMate
 
-* ... #TODO
-
 ---
 
 ## Avantaj & Dezavantajı 
+
+###Avantaj
 
 * Dosya açma süresi
 
@@ -68,10 +68,17 @@ Mart 2014
 
 * İnsert/Komut modunda kelime/dosya tamamlama
 
+###Dezavantajı
+
+* Diger editörlere göre kullanımı biraz daha zordur
+
+* Modlu kullanımı oldugu için bazılarına kullanımı zor gelebilir 
  
 ---
 
 ## Vim Nasıl Kurulur?
+
+###Debian/Linux türevi işletim sistemleri için
 
 * Uçbirim açılır ve aşağıdaki komut yazılır :
 	
@@ -142,6 +149,8 @@ Vim 3 ana hattan oluşur
 * Dosyada herhangi bir degişiklik yapmadan, çıkmak için `:q`
 
 * Yaptıgımız degişiklerin kaydedilmeden dosyayı ilk açtıgımız hali ile bırakmak için `:q!`
+
+* Yaptıgımız degişikleri kaydedip dosyadan direk çıkmak için `ZZ` tuşlarına da basabiliriz
 
 :	+ `:w newfile` komutu ile üzerinde çalıştıgımız dosyayı newfile adında yeni bir dosya olarak da kaydeder
 	+ `saveas newfile` komutu ile yukardaki işlemin aynısı yapılır ve yeni dosyaya geçiş yapılır
@@ -343,5 +352,64 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 * `:set hls` metin içinde arama şablonuna uyan bölümler belirginleştirilir
 
 * `:set tabstop=4` tab uzunlugu ayarlanır
+
+---
+
+##Yapılandırma
+
+* Yapılandırma ~/.vim dizininde ve ~/.vimrc dosyasında degişiklikler yapılarak olur
+
+* Eklentiler ~/.vim dizininin altında yer alırlar
+
+* Vim de istedigimiz ayarları bütün durumlarda kullanabilmek için bu ayarları ~/.vimrc dosyasına yazıp kaydetmemiz gerekir
+
+* Vim her açılışında burdaki ayarları kullanarak açılacaktır
+
+* Örnegim `syntax on` sözdizimine göre renklendirme yapar 
+
+---
+
+##Eklentiler
+
+* Vim`in toplam 4786 tane eklentisi vardır
+
+* Vim eklentilerini kurmanın farklı farklı yolları vardır
+
+* Biz 2 farklı kurulumu anlatacagız
+
+* `Pathogen` ve `Vundle` eklentileri ile eklenti kurmayı görecegiz
+
+---
+
+##Vundle Kurulumu Ve Kullanımı
+
+* Kurmak için şu komutu çalıştırıyoruz
+	
+	`$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+
+* Sonra .vimrc dosyasını açıp şunları yazıyoruz ve kaydediyoruz
+
+:	set nocompatible
+	
+	filetype off
+	
+	set rtp+=~/.vim/bundle/vundle/
+	
+	call vundle#rc()
+	
+	Bundle 'gmarik/vundle'
+	
+	filetype plugin indent on
+
+* vim i açıp şu komutu çalıştırıyoruz `:BundleInstall`
+
+* Eklemek istedigimiz eklentiyi `Bundle 'scrooloose/syntastic'` şeklinde yazıyoruz ve komutu çalıştırıyoruz, bu komut bu eklentiyi kuruyor
+
+---
+
+##Pathogen Kurulumu Ve Kullanımı
+
+*
+
 
 ---
