@@ -54,7 +54,7 @@ Mart 2014
 
 ## Avantaj & Dezavantajı 
 
-###Avantaj
+### Avantaj
 
 * Dosya açma süresi
 
@@ -68,7 +68,7 @@ Mart 2014
 
 * İnsert/Komut modunda kelime/dosya tamamlama
 
-###Dezavantajı
+### Dezavantajı
 
 * Diger editörlere göre kullanımı biraz daha zordur
 
@@ -78,7 +78,7 @@ Mart 2014
 
 ## Vim Nasıl Kurulur?
 
-###Debian/Linux türevi işletim sistemleri için
+### Debian/Linux türevi işletim sistemleri için
 
 * Uçbirim açılır ve aşağıdaki komut yazılır :
 	
@@ -103,7 +103,7 @@ Vim 3 ana hattan oluşur
 
 ---
 
-##Dosya Açma
+## Dosya Açma
 
 * Dosya adı vermeden vim açabiliriz ve kaydetme işlemini burada yapabiliriz
 	+ $ vim
@@ -125,7 +125,7 @@ Vim 3 ana hattan oluşur
 
 ---
 
-##Dosya Açma 2
+## Dosya Açma 2
 
 * Yatay olarak ekranı ikiye bölerek yeni bir dosya açabiliriz
 	+ `:split filename` veya `:sp filename`
@@ -184,7 +184,7 @@ Vim 3 ana hattan oluşur
 
 ---
 
-##Dosya İçerisinde Dolaşma
+## Dosya İçerisinde Dolaşma
 
 * Dosya içerisinde h-j-k-l tuşları ve yön tuşları ile dolaşabiliyorduk
 
@@ -203,7 +203,7 @@ Vim 3 ana hattan oluşur
 * `19 SHIFT + G` ,imleç 19. satıra gider 
 
 ---
-##Dosya İçerisinde Dolaşma 
+## Dosya İçerisinde Dolaşma 
 
 * `Ctrl + g` tuşlayarak  aşagıda dosya hakkında(konumumuz, dosyanın durumu) bilgilere sahip olabiliriz 
 	
@@ -256,7 +256,7 @@ Vim 3 ana hattan oluşur
 
 ---
 
-##Dış Komut Nasıl Çalıştırılır
+## Dış Komut Nasıl Çalıştırılır
 
 * Vim de bir dosyanın içerisindeyken dış komut çalıştırabiliyoruz
 
@@ -274,7 +274,7 @@ Vim 3 ana hattan oluşur
 
 ## Yararlı Kısayollar
 
-###Otomatik Tamamlama
+### Otomatik Tamamlama
 
 * Vim, yazma modunda iken yazdıgımız bir kaç harften sonra dosya içerisinde bu harf veya harflerle başlayan kelimeleri listeler
 
@@ -282,7 +282,7 @@ Vim 3 ana hattan oluşur
 
 * Bunun için `ctrl + p` veya `ctrl + n` kombinasyonları kullanılabilir 
  
-###Degişiklikleri Geri Alma
+### Degişiklikleri Geri Alma
 
 * Bir satırdaki tüm degişiklikleri geri almak için `U` 
 
@@ -295,7 +295,7 @@ Vim 3 ana hattan oluşur
 
 ## Yararlı kısayollar
 
-###Dosya Geçişi
+### Dosya Geçişi
 
 * Vim de çalışırken bir dosyayı kapatıp yeni bir dosya açmak için ekstra işlemler yapmanıza gerek yok 
 	`:e filename` dediginiz anda üzerinde çalıştıgınız dosya kapanır istediginiz dosya açılır
@@ -355,7 +355,7 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 
 ---
 
-##Yapılandırma
+## Yapılandırma
 
 * Yapılandırma ~/.vim dizininde ve ~/.vimrc dosyasında degişiklikler yapılarak olur
 
@@ -369,7 +369,7 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 
 ---
 
-##Eklentiler
+## Eklentiler
 
 * Vim`in toplam 4786 tane eklentisi vardır
 
@@ -379,9 +379,11 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 
 * `Pathogen` ve `Vundle` eklentileri ile eklenti kurmayı görecegiz
 
+* Daha sonra `Syntastic` ve `tComment` eklentilerini kurup ne işe yaradıklarını , nasıl kullanıldıklarını kısaca görecegiz
+ 
 ---
 
-##Vundle Kurulumu Ve Kullanımı
+## Vundle Kurulumu Ve Kullanımı
 
 * Kurmak için şu komutu çalıştırıyoruz
 	
@@ -407,9 +409,82 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 
 ---
 
-##Pathogen Kurulumu Ve Kullanımı
+## Pathogen Kurulumu
 
-*
+* Bu yöntemle kurulum yapmak için bilgisayaranızda curl kurulu olmalıdır
 
+* Konsolu açıyoruz ve şu komutu çalıştırıyoruz 
+
+: 	$ mkdir -p ~/.vim/autoload ~/.vim/bundle;
+		curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+* Daha sonra .vimrc dosyasına şunları yazıyoruz ve kaydediyoruz
+
+:	execute pathogen#infect()
+	
+	syntax on
+	
+	filetype plugin indent on
+
+---
+
+## Pathogen Kullanım
+
+* Pathogen`i kurmuş olduk
+
+* İndirmek istedigimiz eklentiyi `~/.vim/bundle` dizininin içerisine gelip `git clone` komutu ile indiriyoruz
+
+* Pathogen ile kurulum da işte bu kadar
+
+* Pathogen kullanıldıgında dizin aşagıdaki gibi olur
+
+![Pathogen](media/pathogen_dizin.png)
+
+---
+
+## Syntastic
+
+* Bu eklentiyi anlattıgımız 2 yöntemden birisi ile kurup, kullanabilirsiniz
+
+### Kullanımı
+
+* Syntastic, dosyayı kaydettiğimizde sözdizimi denetlemesi yapar
+
+* `:SyntasticCheck` manual olarak sözdizimi denetimi yapar
+
+* `:SyntasticToggleMode` daha fazla bilgi görüntülemenin aktifligi ve pasifligi arasında degişim yapar
+
+* `:SyntasticInfo` Syntastic mod, Dosya tipi ve mevcut checker hakkında bilgi verr
+
+* `:Errors` Kodda hata bulduğu zaman hataları listeler
+
+* `:SyntasticReset` Hata gösterimini resetleyip eski haline getiriyor.
+
+---
+
+## Syntastic
+
+### Default Gelen Ayarlar
+
+* `let g:syntastic_check_on_open = 1` Komut girmeden söz dizimi kontrolleri yapılmasını sağlar.Default degeri 0 olarak gelir
+
+* Error ve Warning uyarılarının yanına sembolde yerleştirebilriz
+	+ `let g:syntastic_error_symbol = '✗'`
+
+	+ `let g:syntastic_warning_symbol = '⚠'`
+
+*  Komut yazmadan otomatik olarak denetleme yapmasını istersek bu aşagıdakileri kullanabiliriz.Default degeri 2 olarak gelir
+
+	+ `let g:syntastic_auto_loc_list = 0` Hata penceresi otomatik olarak açılmaz veya kapanmaz
+
+	+ `let g:syntastic_auto_loc_list = 1` Hata tespit edildiğinde pencere otamatik olarak açılır tespit edilmediğinde otomatik olarak kapanır
+
+	+ `let g:syntastic_auto_loc_list = 2` Hata tesipit edilmediğinde pencere otomatik olarak kapanır ama otomatik olarak açılmaz
+
+---
+
+## tComment
+
+* Yorum satırı...
 
 ---
