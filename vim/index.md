@@ -2,7 +2,7 @@
 
 .fx: first
 
-Mesut Çittir `<mesut.cittir@bil.omu.edu.tr>`
+/**/Mesut Çittir `<mesut.cittir@bil.omu.edu.tr>`
 
 http://mctr.github.io
 
@@ -436,7 +436,7 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 
 * Pathogen ile kurulum da işte bu kadar
 
-* Pathogen kullanıldıgında dizin aşagıdaki gibi olur
+* Pathogen kullanıldıgında dizin yapısı aşagıdaki gibi olur
 
 ![Pathogen](media/pathogen_dizin.png)
 
@@ -481,10 +481,34 @@ Bunun için `:set` komutunu kullanarak vim`in istedigimiz gibi davranmasını sa
 
 	+ `let g:syntastic_auto_loc_list = 2` Hata tesipit edilmediğinde pencere otomatik olarak kapanır ama otomatik olarak açılmaz
 
+* Daha detaylı bilgi için `:help syntastic`
+
 ---
 
 ## tComment
 
-* Yorum satırı...
+* Bu eklenti sayesinde programlama dillerinin yorum satırı yapma karakterlerini ezberlemenize gerek yok
+
+* Eklenti hangi dosya üzerinde çalıştıgınızı algılar ve isteginize göre yorum satırı yapar
+
+## Kullanım
+
+* `gcc` imlecin üzerinde bulundugu satırı yorum satırı yapar
+
+* `ctrl + _ ctrl + _ ` veya `:TComment` imlecin üzerinde bulundugu satırı yorum yapar  
+
+* `gc` seçilen blogu komple yorum yapar
+
+* `ctrl + _ b` veya `:TCommentBlock` seçilen blogu komple yorum yapar
+
+* `ctrl + _ r` vaye `:TCommentRight` imlecin bulundugu yerden itibaren 	sag tarafı satır sonuna kadar yorum yapar 
+
+---
+
+## Sorular
+
+.fx: first
+
+## ?
 
 ---
